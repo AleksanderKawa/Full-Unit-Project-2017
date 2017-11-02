@@ -1,0 +1,37 @@
+body {
+	font-family: 'Roboto', sans-serif;
+background-image: url(https://wallpapercave.com/wp/DM6hvet.jpg);
+}
+
+h1 {
+	color: #ffffff;
+	font-size: 56px;
+	text-align: center;
+	font-family: Georgia, serif;
+	text-shadow: 0 2px #000000;
+	padding: 20px;
+}
+
+h2 {
+	color: rgb(240, 240, 240);	
+}
+
+.intro {
+	color: #ffffff;
+	font-size: 28px;
+	margin: 30px;
+	margin-top: 40px;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
+
+section .row img {
+	margin: 0 0 30px;
+	width: 100%;
+}
+
+.col-sm-6 p {
+	color: #ffffff;
+	font-size: 22px;
+	font-family: Georgia, serif;
+}
+
