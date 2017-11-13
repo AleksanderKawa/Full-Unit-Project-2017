@@ -3,8 +3,75 @@
 	<head>
 		<title>Games</title>
 		<link rel="stylesheet" type="text/css" href="games.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
 	</head>
 	<body>
-		<h1>Choose your Game</h1>
+		<div class="background">		
+		<div class="title">Games</div>
+		<!-- Navigation bar -->
+		<div class="topnavbar" id="myTopnav">
+			<a href="index.html">Home</a>
+			<!--  Process Grom dropdown navigation bar -->
+			<div class="dropdown">
+				<button class="dropbtn">Process Grom
+					<i class="fa fa-caret-down"></i>
+				</button>
+					<div class="dropdown-content">
+						<a href="#">ISO 21500</a>
+						<a href="#">PMI</a>
+						<a href="#">Prince2</a>
+						<a href="#">APM</a>
+					</div>
+			</div>
+			<!-- Prel.... Activity dropdown navigation bar -->			
+			<div class="dropdown">
+				<button class="dropbtn">Prel... Activity
+					<i class="fa fa-caret-down"></i>
+				</button>
+					<div class="dropdown-content">
+						<a href="#">Business Case</a>
+						<a href="#">Contractor</a>
+					</div>
+			</div>			
+			<!-- Planning dropdown navigation bar -->
+			<div class="dropdown">
+				<button class="dropbtn">Planning
+					<i class="fa fa-caret-down"></i>
+				</button>
+					<div class="dropdown-content">
+						<a href="planning.html">Scope</a>
+						<a href="planning.html">Gantt Chart</a>
+						<a href="planning.html"> Budget</a>
+					</div>
+			</div>
+			<a href="games.html" class="active">Games</a>
+		</div>			
+		<div class="intro">
+			<h2>Choose your game</h2>
+		</div>
+		<div class="container">
+		 	<img src="https://bloximages.chicago2.vip.townnews.com/heraldextra.com/content/tncms/assets/v3/editorial/2/22/2227001d-df67-557b-b9e9-f54eb807b012/597f51b6e6376.image.jpg?resize=1200%2C1200" alt="Avatar" class="image" style="width:100%">
+		 	<div class="middle">
+		    	<button class="play">Click to Play!</button>
+		 	</div>
+		</div>		
+		<script>
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+			  if (!event.target.matches('.dropbtn')) {
+
+			    var dropdowns = document.getElementsByClassName("dropdown-content");
+			    var i;
+			    for (i = 0; i < dropdowns.length; i++) {
+			      var openDropdown = dropdowns[i];
+			      if (openDropdown.classList.contains('show')) {
+			        openDropdown.classList.remove('show');
+			      }
+			    }
+			  }
+			}
+		</script>
+		</div>			
 	</body>
 </html>
