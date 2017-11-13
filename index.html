@@ -6,35 +6,51 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<h1>Project Management Literacy System</h1>
-
-		<div class="topnavbar" id="myTopnav">
-			<a href="#home" class="active">Home</a>
-			<a href="#news">News</a>
-			<a href="#contact">Contact</a>
-			<div class="dropdown">
-				<button class="dropbtn" onclick="myFunction()">About
-					<i class="fa fa-caret-down"></i>
-				</button>
-					<div class="dropdown-content" id="myDropdown">
-						<a href="games.html">Games</a>
-						<a href="businessDef.html">Business Definiction</a>
-						<a href="#">Link 3</a>
-					</div>
+		<div class="background">
+			<div class="title">Project Management Literacy System</div>
+			<!-- Navigation bar -->
+			<div class="topnavbar" id="myTopnav">
+				<a href="index.html" class="active">Home</a>
+				<!--  Process Grom dropdown navigation bar -->
+				<div class="dropdown">
+					<button class="dropbtn">Process Grom
+						<i class="fa fa-caret-down"></i>
+					</button>
+						<div class="dropdown-content">
+							<a href="#">ISO 21500</a>
+							<a href="#">PMI</a>
+							<a href="#">Prince2</a>
+							<a href="#">APM</a>
+						</div>
+				</div>
+				<!-- Prel.... Activity dropdown navigation bar -->			
+				<div class="dropdown">
+					<button class="dropbtn">Prel... Activity
+						<i class="fa fa-caret-down"></i>
+					</button>
+						<div class="dropdown-content">
+							<a href="#">Business Case</a>
+							<a href="#">Contractor</a>
+						</div>
+				</div>			
+				<!-- Planning dropdown navigation bar -->
+				<div class="dropdown">
+					<button class="dropbtn">Planning
+						<i class="fa fa-caret-down"></i>
+					</button>
+						<div class="dropdown-content">
+							<a href="planning.html">Scope</a>
+							<a href="planning.html">Gantt Chart</a>
+							<a href="planning.html"> Budget</a>
+						</div>
+				</div>
+				<a href="games.html">Games</a>
+			</div>			
+			<div class="intro">
+				<h2>Introduction</h2>
+				<p>What is a Project?</p>
 			</div>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-
-		</div>			
-		<div class="intro">
-			<h2>Intro</h2>
-			<p>This is a description of the PM</p>
-		</div>
 		<script>
-			/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
-			function myFunction() {
-			    document.getElementById("myDropdown").classList.toggle("show");
-			}
-
 			// Close the dropdown if the user clicks outside of it
 			window.onclick = function(event) {
 			  if (!event.target.matches('.dropbtn')) {
@@ -49,6 +65,7 @@
 			    }
 			  }
 			}
-		</script>	
+		</script>
+		</div>			
 	</body>
 </html>

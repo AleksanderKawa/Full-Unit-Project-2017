@@ -1,9 +1,18 @@
-body {
-	font-family: 'Roboto', sans-serif;
-background-image: url(https://wallpapercave.com/wp/DM6hvet.jpg);
+body, html {
+	height: 100%;
+	margin: 0;
 }
 
-h1 {
+.background {
+	background-image: url(https://wallpapercave.com/wp/DM6hvet.jpg);
+	height: 100%;
+	    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
 	color: #ffffff;
 	font-size: 56px;
 	text-align: center;
@@ -22,28 +31,6 @@ h2 {
 	margin: 30px;
 	margin-top: 40px;
 	font-family: 'Trebuchet MS', 'Helvetica';
-}
-
-/* Add a black background color to the top navigation */
-.topnavbar {
-	background-color: #333;
-	overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnavbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnavbar a:hover {
-    background-color: #ddd;
 }
 
 /* Add a color to the active/current link */
@@ -137,6 +124,6 @@ h2 {
     background-color: #ddd;
 }
 
-.show {
+.dropdown:hover .dropdown-content {
     display: block;
 }
