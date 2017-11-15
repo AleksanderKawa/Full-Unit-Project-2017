@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Process Groups</title>
+		<link rel="stylesheet" type="text/css" href="processGroups.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">			
+	</head>
+	<body>
+		<div class="background">
+		<header id="page-header">
+			<div class="title">Process Groups</div>
+		</header>
+		<!-- Navigation bar -->
+		<div class="topnavbar">
+			<a href="index.html">Home</a>
+			<a href="processGroups.html" class="active">Process Groups</a>	
+			<a href="preInitiationActivity.html">Pre Initiation Activity</a>
+			<a href="planning.html">Planning</a>
+			<a href="games.html">Games</a>
+		</div>
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'ISO21500')" id="defaultOpen">ISO 21500</button>
+				<button class="tablinks" onclick="openCity(event, 'PMI')">PMI</button>
+				<button class="tablinks" onclick="openCity(event, 'Prince2')">Prince2</button>
+				<button class="tablinks" onclick="openCity(event, 'APM')">APM</button>
+			</div>
+
+			<div id="ISO21500" class="tabcontent">
+				<h1>What is the ISO 21500?</h1>
+				<p>This is a description of the ISO 21500</p>
+			</div>
+
+			<div id="PMI" class="tabcontent">
+				<h1>Project Management Institute (PMI)</h1>
+				<p>This is a description of the PMI</p>
+			</div>
+
+			<div id="Prince2" class="tabcontent">
+				<h1>Prince2</h1>
+				<p>This is a description of the Prince2</p>
+			</div>
+
+			<div id="APM" class="tabcontent">
+				<h1>APM</h1>
+				<p>This is a description of the APM</p>
+			</div>					
+		<script>
+			function openCity(evt, cityName) {
+			    var i, tabcontent, tablinks;
+			    tabcontent = document.getElementsByClassName("tabcontent");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tabcontent[i].style.display = "none";
+			    }
+			    tablinks = document.getElementsByClassName("tablinks");
+			    for (i = 0; i < tablinks.length; i++) {
+			        tablinks[i].className = tablinks[i].className.replace(" active", "");
+			    }
+			    document.getElementById(cityName).style.display = "block";
+			    evt.currentTarget.className += " active";
+			}
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+	</div>				
+	</body>
+</html>
