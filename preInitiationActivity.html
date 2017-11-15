@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pre Initiation Activity</title>
+		<link rel="stylesheet" type="text/css" href="processGroups.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">			
+	</head>
+	<body>
+		<div class="background">
+		<header id="page-header">	
+		<div class="title">Pre Initiation Activity</div>
+		</header>
+		<!-- Navigation bar -->
+		<div class="topnavbar">
+			<a href="index.html">Home</a>
+			<a href="processGroups.html">Process Groups</a>	
+			<a href="preInitiationActivity.html" class="active">Pre Initiation Activity</a>
+			<a href="planning.html">Planning</a>
+			<a href="games.html">Games</a>
+		</div>
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'BusinessCase')" id="defaultOpen">Business Case</button>
+				<button class="tablinks" onclick="openCity(event, 'Contractor')">Contractor</button>
+				<button class="tablinks" onclick="openCity(event, 'Statementofwork')">Statement of work</button>
+			</div>
+
+			<div id="BusinessCase" class="tabcontent">
+				<h1>What is the Business Case?</h1>
+				<p>This is a description of the Business Case</p>
+			</div>
+
+			<div id="Contractor" class="tabcontent">
+				<h1>What is the Contractor?</h1>
+				<p>This is a description of the Contractor</p>
+			</div>
+
+			<div id="Statementofwork" class="tabcontent">
+				<h1>Statement of work</h1>
+				<p>This is a description of the Statement of work</p>
+			</div>				
+		<script>
+			function openCity(evt, cityName) {
+			    var i, tabcontent, tablinks;
+			    tabcontent = document.getElementsByClassName("tabcontent");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tabcontent[i].style.display = "none";
+			    }
+			    tablinks = document.getElementsByClassName("tablinks");
+			    for (i = 0; i < tablinks.length; i++) {
+			        tablinks[i].className = tablinks[i].className.replace(" active", "");
+			    }
+			    document.getElementById(cityName).style.display = "block";
+			    evt.currentTarget.className += " active";
+			}
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+	</div>							
+	</body>
+</html>
