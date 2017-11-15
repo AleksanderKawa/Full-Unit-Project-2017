@@ -2,74 +2,59 @@
 <html>
 	<head>
 		<title>Planning</title>
-		<link rel="stylesheet" type="text/css" href="planning.css">
+		<link rel="stylesheet" type="text/css" href="processGroups.css">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">			
 	</head>
 	<body>
-		<div class="background">		
-		<div class="title">Planning</div>	
+		<div class="background">
+		<header id="page-header">	
+			<div class="title">Planning</div>
+		</header>
 		<!-- Navigation bar -->
-		<div class="topnavbar" id="myTopnav">
+		<div class="topnavbar">
 			<a href="index.html">Home</a>
-			<!--  Process Grom dropdown navigation bar -->
-			<div class="dropdown">
-				<button class="dropbtn">Process Grom
-					<i class="fa fa-caret-down"></i>
-				</button>
-					<div class="dropdown-content">
-						<a href="#">ISO 21500</a>
-						<a href="#">PMI</a>
-						<a href="#">Prince2</a>
-						<a href="#">APM</a>
-					</div>
-			</div>
-			<!-- Prel.... Activity dropdown navigation bar -->			
-			<div class="dropdown">
-				<button class="dropbtn">Prel... Activity
-					<i class="fa fa-caret-down"></i>
-				</button>
-					<div class="dropdown-content">
-						<a href="#">Business Case</a>
-						<a href="#">Contractor</a>
-					</div>
-			</div>			
-			<!-- Planning dropdown navigation bar -->
-			<div class="dropdown">
-				<button class="dropbtn">Planning
-					<i class="fa fa-caret-down"></i>
-				</button>
-					<div class="dropdown-content">
-						<a href="planning.html">Scope</a>
-						<a href="planning.html">Gantt Chart</a>
-						<a href="planning.html"> Budget</a>
-					</div>
-			</div>
+			<a href="processGroups.html">Process Groups</a>	
+			<a href="preInitiationActivity.html">Pre Initiation Activity</a>
+			<a href="planning.html" class="active">Planning</a>
 			<a href="games.html">Games</a>
-		</div>			
-		<div class="intro">
-			<h2>Scope</h2>
-			<p>This is a description of the scope</p>
-			<h2>Gantt Chart</h2>
-			<p>This is a description of the Gantt chart</p>
-			<h2>Budget</h2>
-			<p>This is a description of the budget</p>
 		</div>
-		<script>
-			// Close the dropdown if the user clicks outside of it
-			window.onclick = function(event) {
-			  if (!event.target.matches('.dropbtn')) {
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'Scope')" id="defaultOpen">Scope</button>
+				<button class="tablinks" onclick="openCity(event, 'Gantt Chart')">Gantt Chart</button>
+				<button class="tablinks" onclick="openCity(event, 'Budget')">Budget</button>
+			</div>
 
-			    var dropdowns = document.getElementsByClassName("dropdown-content");
-			    var i;
-			    for (i = 0; i < dropdowns.length; i++) {
-			      var openDropdown = dropdowns[i];
-			      if (openDropdown.classList.contains('show')) {
-			        openDropdown.classList.remove('show');
-			      }
+			<div id="Scope" class="tabcontent">
+				<h1>What is the Scope?</h1>
+				<p>This is a description of the Scope</p>
+			</div>
+
+			<div id="Gantt Chart" class="tabcontent">
+				<h1>What is the Gantt Chart?</h1>
+				<p>This is a description of the Gantt Chart</p>
+			</div>
+
+			<div id="Budget" class="tabcontent">
+				<h1>What is the Budget?</h1>
+				<p>This is a description of the Budget</p>
+			</div>				
+		<script>
+			function openCity(evt, cityName) {
+			    var i, tabcontent, tablinks;
+			    tabcontent = document.getElementsByClassName("tabcontent");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tabcontent[i].style.display = "none";
 			    }
-			  }
+			    tablinks = document.getElementsByClassName("tablinks");
+			    for (i = 0; i < tablinks.length; i++) {
+			        tablinks[i].className = tablinks[i].className.replace(" active", "");
+			    }
+			    document.getElementById(cityName).style.display = "block";
+			    evt.currentTarget.className += " active";
 			}
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
 		</script>
 	</div>				
 	</body>
