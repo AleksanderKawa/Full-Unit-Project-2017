@@ -7,65 +7,27 @@
 	</head>
 	<body>
 		<div class="background">
-			<div class="title">Project Management Literacy System</div>
-			<!-- Navigation bar -->
-			<div class="topnavbar" id="myTopnav">
-				<a href="index.html" class="active">Home</a>
-				<!--  Process Grom dropdown navigation bar -->
-				<div class="dropdown">
-					<button class="dropbtn">Process Grom
-						<i class="fa fa-caret-down"></i>
-					</button>
-						<div class="dropdown-content">
-							<a href="#">ISO 21500</a>
-							<a href="#">PMI</a>
-							<a href="#">Prince2</a>
-							<a href="#">APM</a>
-						</div>
+		<header id="page-header">
+			<div class="title">Project Management Literacy System</div>	
+		</header>
+		<header role="banner" class="topnavbar">
+			<nav role="navigation" class="topnavbar-inner">
+				<!-- Navigation bar -->
+				<div class="topnavbar">
+					<a href="index.html" class="active">Home</a>
+					<a href="processGroups.html">Process Groups</a>	
+					<a href="preInitiationActivity.html">Pre Initiation Activity</a>
+					<a href="planning.html">Planning</a>
+					<a href="games.html">Games</a>
 				</div>
-				<!-- Prel.... Activity dropdown navigation bar -->			
-				<div class="dropdown">
-					<button class="dropbtn">Prel... Activity
-						<i class="fa fa-caret-down"></i>
-					</button>
-						<div class="dropdown-content">
-							<a href="#">Business Case</a>
-							<a href="#">Contractor</a>
-						</div>
-				</div>			
-				<!-- Planning dropdown navigation bar -->
-				<div class="dropdown">
-					<button class="dropbtn">Planning
-						<i class="fa fa-caret-down"></i>
-					</button>
-						<div class="dropdown-content">
-							<a href="planning.html">Scope</a>
-							<a href="planning.html">Gantt Chart</a>
-							<a href="planning.html"> Budget</a>
-						</div>
-				</div>
-				<a href="games.html">Games</a>
-			</div>			
-			<div class="intro">
-				<h2>Introduction</h2>
-				<p>What is a Project?</p>
-			</div>
-		<script>
-			// Close the dropdown if the user clicks outside of it
-			window.onclick = function(event) {
-			  if (!event.target.matches('.dropbtn')) {
-
-			    var dropdowns = document.getElementsByClassName("dropdown-content");
-			    var i;
-			    for (i = 0; i < dropdowns.length; i++) {
-			      var openDropdown = dropdowns[i];
-			      if (openDropdown.classList.contains('show')) {
-			        openDropdown.classList.remove('show');
-			      }
-			    }
-			  }
-			}
-		</script>
-		</div>			
+			</nav>
+		</header>
+		<div class="mainTitle">
+			<p>What is a Project?</p>			
+		</div>
+		<div class="mainBody">
+			<p>Project Management has various definitions for instance, “A project is a temporary endeavour undertaken to create a unique product, service, or result.” (PMI, PMBOK Guide), “A temporary organisation that is needed to produce a unique and predefined outcome or result at a prespecified time using predetermined resources” or “A management environment that is created for the purpose of delivering one or more business product to a specified Business Case” (Prince2).</p>
+		</div>	
+	</div>				
 	</body>
 </html>
