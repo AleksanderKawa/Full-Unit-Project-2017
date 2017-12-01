@@ -6,10 +6,8 @@ body, html {
 .background {
 	background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/light-grey-smooth-flowing-waves-grunge-background-video-animation-hd-1920x1080_4eyfwizql__F0000.png);
 	height: 100%;
-	/* Center and scale the image nicely */
-    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-attachment: fixed;
 }
 
 #page-header {
@@ -32,7 +30,7 @@ body, html {
 }
 .mainTitle {
     color: #657383;
-    font-size: 54px;
+    font-size: 32px;
     text-align: center;
     font-family: sans-serif;
     text-shadow: 0 2px #000000;
@@ -41,10 +39,9 @@ body, html {
 
 .mainBody {
     color: #657383;
-    font-size: 26px;
+    font-size: 21px;
     text-align: center;
     font-family: sans-serif;
-    text-shadow: 0 2px #000000;
     padding-left: 300px;
     padding-right: 300px;
     text-align: left;
@@ -57,7 +54,6 @@ h2 {
 .intro {
 	text-align: center;
 	color: #ffffff;
-	font-size: 28px;
 	margin: 30px;
 	margin-top: 40px;
 	font-family: 'Trebuchet MS', 'Helvetica';
