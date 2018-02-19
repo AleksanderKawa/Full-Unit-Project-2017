@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Games</title>
+		<title>Quiz</title>
 		<link rel="stylesheet" type="text/css" href="games.css">
 		<link rel="stylesheet" type="text/css" href="processGroups.css">
 		<link rel="stylesheet" type="text/css" href="main.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 	</head>
 	<body>
 		<div class="background">
 		<header id="page-header">	
-			<div class="title">Games</div>
+			<div class="title">Quiz</div>
 		</header>
 		<!-- Navigation bar -->
 		<div class="topnavbar">
@@ -18,14 +18,172 @@
 			<a href="processGroups.html">Process Groups</a>	
 			<a href="preInitiationActivity.html">Pre Initiation Activity</a>
 			<a href="planning.html">Planning</a>
-			<a href="games.html" class="active">Games</a>
+			<a href="games.html" class="active">Quiz</a>
 		</div>				
-		<div class="container">
-		 	<img src="https://bloximages.chicago2.vip.townnews.com/heraldextra.com/content/tncms/assets/v3/editorial/2/22/2227001d-df67-557b-b9e9-f54eb807b012/597f51b6e6376.image.jpg?resize=1200%2C1200" alt="crosswords" class="image" style="width: 35%">
-		 	<div class="middle">
-		    	<button class="play">Click to Play!</button>
-		 	</div>
-		</div>		
-		</div>			
+		<h1>Quiz on Project Management</h1>
+		<div class="quiz-container">
+		  <div id="quiz"></div>
+		</div>
+		<button id="previous">Previous Question</button>
+		<button id="next">Next Question</button>
+		<button id="submit">Submit Quiz</button>
+		<div id="results"></div>		
+		<script>
+			function playButton(){
+				document.getElementById('containerbutton').style.visibility = "hidden";
+				document.getElementById('');
+			}
+
+			const quizContainer = document.getElementById('quiz');
+			const resultsContainer = document.getElementById('results');
+			const submitButton = document.getElementById('submit');
+
+			(function() {
+			  const myQuestions = [
+			    {
+			      question: "Which one is used in five process groups in the Project Management?",
+			      answers: {
+			        a: "Planning",
+			        b: "Cost",
+			        c: "Acceptance"
+			      },
+			      correctAnswer: "a"
+			    },
+			    {
+			      question: "Which one is the Project Variable also called The Project Triangle?",
+			      answers: {
+			        a: "Transference",
+			        b: "Cost",
+			        c: "Controlling"
+			      },
+			      correctAnswer: "b"
+			    },
+			    {
+			      question: "Which one is the risk management?",
+			      answers: {
+			        a: "Reduction",
+			        b: "Time",
+			        c: "Closing",
+			        d: "Control risk"
+			      },
+			      correctAnswer: "d"
+			    }
+			  ];
+
+			  function playButton() {
+			    // we'll need a place to store the HTML output
+			    const output = [];
+
+			    // for each question...
+			    myQuestions.forEach((currentQuestion, questionNumber) => {
+			      // we'll want to store the list of answer choices
+			      const answers = [];
+
+			      // and for each available answer...
+			      for (letter in currentQuestion.answers) {
+			        // ...add an HTML radio button
+			        answers.push(
+			          `<label>
+			             <input type="radio" name="question${questionNumber}" value="${letter}">
+			              ${letter} :
+			              ${currentQuestion.answers[letter]}
+			           </label>`
+			        );
+			      }
+
+			      // add this question and its answers to the output
+			      output.push(
+			        `<div class="slide">
+			           <div class="question"> ${currentQuestion.question} </div>
+			           <div class="answers"> ${answers.join("")} </div>
+			         </div>`
+			      );
+			    });
+
+			    // finally combine our output list into one string of HTML and put it on the page
+			    quizContainer.innerHTML = output.join("");
+			  }
+
+			  function showResults() {
+			    // gather answer containers from our quiz
+			    const answerContainers = quizContainer.querySelectorAll(".answers");
+
+			    // keep track of user's answers
+			    let numCorrect = 0;
+
+			    // for each question...
+			    myQuestions.forEach((currentQuestion, questionNumber) => {
+			      // find selected answer
+			      const answerContainer = answerContainers[questionNumber];
+			      const selector = `input[name=question${questionNumber}]:checked`;
+			      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+			      // if answer is correct
+			      if (userAnswer === currentQuestion.correctAnswer) {
+			        // add to the number of correct answers
+			        numCorrect++;
+
+			        // color the answers green
+			        answerContainers[questionNumber].style.color = "lightgreen";
+			      } else {
+			        // if answer is wrong or blank
+			        // color the answers red
+			        answerContainers[questionNumber].style.color = "red";
+			      }
+			    });
+
+			    // show number of correct answers out of total
+			    resultsContainer.innerHTML = `The number of correct answers are ${numCorrect} out of ${myQuestions.length}`;
+			  }
+
+			  function showSlide(n) {
+			    slides[currentSlide].classList.remove("active-slide");
+			    slides[n].classList.add("active-slide");
+			    currentSlide = n;
+			    
+			    if (currentSlide === 0) {
+			      previousButton.style.display = "none";
+			    } else {
+			      previousButton.style.display = "inline-block";
+			    }
+			    
+			    if (currentSlide === slides.length - 1) {
+			      nextButton.style.display = "none";
+			      submitButton.style.display = "inline-block";
+			    } else {
+			      nextButton.style.display = "inline-block";
+			      submitButton.style.display = "none";
+			    }
+			  }
+
+			  function showNextSlide() {
+			    showSlide(currentSlide + 1);
+			  }
+
+			  function showPreviousSlide() {
+			    showSlide(currentSlide - 1);
+			  }
+
+			  const quizContainer = document.getElementById("quiz");
+			  const resultsContainer = document.getElementById("results");
+			  const submitButton = document.getElementById("submit");
+
+			  // display quiz right away
+			  playButton();
+
+			  const previousButton = document.getElementById("previous");
+			  const nextButton = document.getElementById("next");
+			  const slides = document.querySelectorAll(".slide");
+			  let currentSlide = 0;
+
+			  showSlide(0);
+
+			  // on submit, show results
+			  submitButton.addEventListener("click", showResults);
+			  previousButton.addEventListener("click", showPreviousSlide);
+			  nextButton.addEventListener("click", showNextSlide);
+			})();	
+		</script>		
+		</div>
 	</body>
 </html>
