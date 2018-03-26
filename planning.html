@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Planning</title>
+		<title>Project Scope, Time, Cost and Quality</title>
 		<link rel="stylesheet" type="text/css" href="processGroups.css">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">			
@@ -9,36 +9,47 @@
 	<body>
 		<div class="background">
 		<header id="page-header">	
-			<div class="title">Planning</div>
+			<div class="title">Project Scope, Time, Cost and Quality</div>
 		</header>
+		<header role="banner" class="topnavbar">
+			<nav role="navigation" class="topnavbar-inner">
 		<!-- Navigation bar -->
 		<div class="topnavbar">
-			<a href="index.html">Home</a>
-			<a href="processGroups.html">Process Groups</a>	
-			<a href="preInitiationActivity.html">Pre Initiation Activity</a>
-			<a href="planning.html" class="active">Planning</a>
+			<a href="index.html">The Project Management</a>
+			<a href="processGroups.html">The PM Process Groups</a>	
+			<a href="preInitiationActivity.html">Pre Initiation Management</a>
+			<a href="planning.html" class="active">Project Scope, Time, Cost and Quality</a>
+			<a href="projectPeople.html">People in the Project Management</a>
 			<a href="games.html">Quiz</a>
 		</div>
+			</nav>
+		</header>
 			<div class="tab">
-				<button class="tablinks" onclick="openCity(event, 'Scope')" id="defaultOpen">Scope</button>
-				<button class="tablinks" onclick="openCity(event, 'Gantt Chart')">Gantt Chart</button>
-				<button class="tablinks" onclick="openCity(event, 'Budget')">Budget</button>
+				<button class="tablinks" onclick="openCity(event, 'ProjectScopeManagement')" id="defaultOpen">Project Scope Management</button>
+				<button class="tablinks" onclick="openCity(event, 'ProjectTimeManagement')">Project Time Management</button>
+				<button class="tablinks" onclick="openCity(event, 'ProjectCostManagement')">Project Cost Management</button>
+				<button class="tablinks" onclick="openCity(event, 'ProjectQualityManagement')">Project Quality Management</button>
 			</div>
 
-			<div id="Scope" class="tabcontent">
-				<h1>Scope</h1>
+			<div id="ProjectScopeManagement" class="tabcontent">
+				<h1>Project Scope Management</h1>
 				<p>In project management, the term scope has two distinct uses: Project Scope and Product Scope. Scope involves getting information required to start a project, and the features the product would have that would meet its stakeholders requirements. 1.Project Scope: "The work that needs to be accomplished to deliver a product, service, or result with the specified features and functions." 2.Product Scope: "The features and functions that characterize a product, service, or result." Notice that Project Scope is more work-oriented (the hows), while Product Scope is more oriented toward functional requirements (the whats).</p>
 			</div>
 
-			<div id="Gantt Chart" class="tabcontent">
-				<h1>Gantt Chart</h1>
+			<div id="ProjectTimeManagement" class="tabcontent">
+				<h1>Project Time Management</h1>
 				<p>A Gantt chart is a type of bar chart that illustrates a project schedule. Gantt charts illustrate the start and finish dates of the terminal elements and summary elements of a project. Terminal elements and summary elements comprise the work breakdown structure of the project. Modern Gantt charts also show the dependency (i.e., precedence network) relationships between activities. Gantt charts can be used to show current schedule status using percent-complete shadings and a vertical "TODAY" line as shown here.</p>
 			</div>
 
-			<div id="Budget" class="tabcontent">
-				<h1>Budget</h1>
+			<div id="ProjectCostManagement" class="tabcontent">
+				<h1>Project Cost Management</h1>
 				<p>Once your business is operational, it's essential to plan and tightly manage its financial performance. Creating a budgeting process is the most effective way to keep your business - and its finances - on track.</p>
-			</div>				
+			</div>
+
+			<div id="ProjectQualityManagement" class="tabcontent">
+				<h1>Project Quality Management</h1>
+				<p>Once your business is operational, it's essential to plan and tightly manage its financial performance. Creating a budgeting process is the most effective way to keep your business - and its finances - on track.</p>
+			</div>								
 		<script>
 			function openCity(evt, cityName) {
 			    var i, tabcontent, tablinks;
