@@ -12,14 +12,20 @@
 		<header id="page-header">	
 			<div class="title">Quiz</div>
 		</header>
+		<header role="banner" class="topnavbar">
+			<nav role="navigation" class="topnavbar-inner">		
 		<!-- Navigation bar -->
 		<div class="topnavbar">
-			<a href="index.html">Home</a>
-			<a href="processGroups.html">Process Groups</a>	
-			<a href="preInitiationActivity.html">Pre Initiation Activity</a>
-			<a href="planning.html">Planning</a>
+			<a href="index.html">The Project Management</a>
+			<a href="processGroups.html">The PM Process Groups</a>	
+			<a href="preInitiationActivity.html">Pre-Initiation Management</a>
+			<a href="planning.html">Project Scope, Time, Cost and Quality</a>
+			<a href="projectPeople.html">People in the Project</a>
 			<a href="games.html" class="active">Quiz</a>
-		</div>				
+			<a href="projectGame.html">Game</a>
+		</div>
+			</nav>
+		</header>			
 		<h1>Quiz on Project Management</h1>
 		<div class="quiz-container">
 		  <div id="quiz"></div>
@@ -41,42 +47,65 @@
 			(function() {
 			  const myQuestions = [
 			    {
-			      question: "Which one is used in five process groups in the Project Management?",
+			      question: "Which of the following is not an attribute of a project?",
 			      answers: {
-			        a: "Planning",
-			        b: "Cost",
-			        c: "Acceptance"
+			        a: "Projects are unique",
+			        b: "Projects are developed using progressive elaboration",
+			        c: "Projects have a primary customer or sponsor",
+			        d: "Projects involve little uncertainty"
+			      },
+			      correctAnswer: "d"
+			    },
+			    {
+			      question: "Which of the following is not part of the triple constraint of project management?",
+			      answers: {
+			        a: "meeting scope goals",
+			        b: "meeting time goals",
+			        c: "meeting communications goals",
+			        d: "meeting cost goals"
+			      },
+			      correctAnswer: "c"
+			    },
+			    {
+			      question: "Which process group normally requires the most resources and time?",
+			      answers: {
+			        a: "Initiating",
+			        b: "Planning",
+			        c: "Closing",
+			        d: "Executing",
+			        e: "Monitoring and controlling"
+			      },
+			      correctAnswer: "d"
+			    },
+			    {
+			      question: "Initiating involves developing a project character, which is part of the project 'blank' management knowledge area",
+			      answers: {
+			        a: "integration",
+			        b: "scope",
+			        c: "communications",
+			        d: "risk"
 			      },
 			      correctAnswer: "a"
 			    },
 			    {
-			      question: "Which one is the Project Variable also called The Project Triangle?",
+			      question: "What is the main goal of project cost management?",
 			      answers: {
-			        a: "Transference",
-			        b: "Cost",
-			        c: "Controlling"
+			        a: "to complete a project for as little cost as possible",
+			        b: "to complete a project within an approved budget",
+			        c: "to provide truthful and accurate cost information on projects",
+			        d: "to ensure that an organization's money is used wisely"
 			      },
 			      correctAnswer: "b"
-			    },
-			    {
-			      question: "Which one is the risk management?",
-			      answers: {
-			        a: "Reduction",
-			        b: "Time",
-			        c: "Closing",
-			        d: "Control risk"
-			      },
-			      correctAnswer: "d"
-			    }
+			    }			    			    
 			  ];
 
 			  function playButton() {
-			    // we'll need a place to store the HTML output
+			    // I need a place to store the HTML output
 			    const output = [];
 
 			    // for each question...
 			    myQuestions.forEach((currentQuestion, questionNumber) => {
-			      // we'll want to store the list of answer choices
+			      // I want to store the list of answer choices
 			      const answers = [];
 
 			      // and for each available answer...
@@ -100,7 +129,7 @@
 			      );
 			    });
 
-			    // finally combine our output list into one string of HTML and put it on the page
+			    // finally combine the output list into one string of HTML and put it on the page
 			    quizContainer.innerHTML = output.join("");
 			  }
 
